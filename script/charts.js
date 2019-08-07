@@ -1,3 +1,5 @@
+Chart.defaults.global.responsive = true;
+
 var traffic = document.getElementById('trafficChart');
 var trafficChart = new Chart(traffic, {
 	type: 'line',
