@@ -27,21 +27,16 @@ const send = document.getElementById('send-message');
 const form = document.getElementById('form-container');
 const fields = document.getElementById('fields-container');
 
-const errorMessage = document.createElement('div');
-errorMessage.className = "alert alert-danger";
-errorMessage.setAttribute("role", "alert");
-errorMessage.innerHTML = "<strong>Error</strong> Please fill in the search and message fields.";
-
 const sentMessage = document.createElement('div');
 sentMessage.className = "alert alert-success";
 sentMessage.setAttribute("role", "alert");
 sentMessage.textContent = "Your message has been sent!"
 
 send.addEventListener("click", ()=>{
-  fields.style.display = "none";
   if(input.value === "" || message.value === "") {
-    form.appendChild(errorMessage);
+    window.alert("Please fill in the search and message fields.");
   } else {
+    fields.style.display = "none";
     form.appendChild(sentMessage);
   }
 });

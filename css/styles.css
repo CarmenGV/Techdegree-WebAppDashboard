@@ -254,7 +254,13 @@ nav a svg {
 /* CHART CONTAINERS */
 .chart-container {
 	position: relative;
-	width: 100%;
+	width: 100vw;
+	height: auto;
+}
+.chart-container-half {
+	position: relative;
+	width: 100vw;
+	height: auto;
 }
 .row-title {
 	font-family: 'Raleway', sans-serif;
@@ -276,6 +282,12 @@ nav a svg {
 @media (min-width: 768px) {
 	.row-col-2 {
 		flex-direction: row;
+	}
+	.chart-container {
+		width: 90vw;
+	}
+	.chart-container-half {
+		width: 40vw;
 	}
 }
 
